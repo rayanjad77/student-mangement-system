@@ -11,21 +11,25 @@ def add_student():
     average = calculate_average(grade1, grade2, grade3)
     students.append([name, grade1, grade2, grade3, average])
 
-     print("Student added successfully!")
-     print(f"Average: {average:.2f}")
+    print("Student added successfully!")
+    print(f"Average: {average:.2f}")
+
 def display_students():
     if not students:
         print("No students found.")
         return
-     print("\n--- Students List ---")
-     for student in students:
+
+    print("\n--- Students List ---")
+    for student in students:
          name, g1, g2, g3, avg = student 
          print(f"Name: {name} | Grades: {g1}, {g2}, {g3} | Average: {avg:.2f}")
+
 while True:
     print("\n1. Add Student")
     print("2. Display Students")
     print("3. Exit")
     choice = input("Choose an option: ").strip()
+
     if choice == "1":
         add_student()
     elif choice == "2":
@@ -34,4 +38,4 @@ while True:
         print("Goodbye!")
         break
     else:
-        print("Invalid choice, try again.") 
+        print("Invalid choice, try again.")
